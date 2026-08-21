@@ -12,15 +12,17 @@
 </head>
 <body>
 <h1>隐私政策 · Privacy Policy</h1>
-<p class="muted">最后更新：2026-06-20 · 应用：PHONO 英文音标标注工具</p>
+<p class="muted">最后更新：2026-08-21 · 应用：PHONO 英文音标标注工具</p>
 
 <p>PHONO（“本应用”）尊重并保护用户隐私。本政策说明我们如何处理你的信息。使用本应用即表示你同意本政策。</p>
 
 <h2>1. 我们收集的信息</h2>
 <ul>
-  <li><b>本地数据</b>：你的查询记录、生词本、设置仅保存在你设备本地（AsyncStorage），不会上传到我们的服务器，也不与账号关联（本应用无需注册登录）。</li>
+  <li><b>本地数据</b>：你的查询记录、生词本、句子与设置<b>默认仅保存在你的设备本地</b>。<b>无需注册即可使用全部核心功能</b>；注册登录仅用于跨设备同步。</li>
+  <li><b>账号信息（可选）</b>：若你选择注册，我们会收集你的<b>电子邮箱地址</b>用于创建账号、登录与找回密码。</li>
+  <li><b>云端同步数据（可选，需登录并开启同步）</b>：开启后，你的生词本、句子、学习记录与复习记录（对应 words / documents / encounters / review_logs 四类数据，其中包含你查询的单词及其出现的上下文原文）会上传至我们托管在 Supabase 的数据库，并<b>与你的账号关联</b>。不登录或不开启同步则始终不上传。</li>
   <li><b>你主动提供的内容</b>：你查询的单词、粘贴的文本、为识别而拍摄/选择的图片或导入的文件。</li>
-  <li>我们<b>不收集</b>姓名、手机号、位置、通讯录等个人身份信息。</li>
+  <li>我们<b>不收集</b>姓名、手机号、位置、通讯录、广告标识符等信息，也不用于追踪或广告。</li>
 </ul>
 
 <h2>2. 信息如何被使用</h2>
@@ -28,6 +30,7 @@
   <li>为实现音标标注、释义与翻译，所查询的单词/文本会发送给第三方词典与翻译服务。</li>
   <li>使用“拍照识别 / 导入图片 / 导入文件”时，所选图片会发送给第三方 OCR 服务以提取文字；文本文件在本地读取。</li>
   <li>相机与相册权限仅用于上述识别功能，不会在后台访问。</li>
+  <li>使用「语法检查」「AI 讲解」「每周点评」时，相应的文本会发送给第三方 AI 服务以生成结果。</li>
 </ul>
 
 <h2>3. 第三方服务</h2>
@@ -35,12 +38,15 @@
 <ul>
   <li>Free Dictionary API（音标/释义查询）</li>
   <li>OCR.space 或自建 OCR 服务（图片文字识别）</li>
-  <li>DeepSeek / Supabase Edge Function（中文翻译）</li>
+  <li>DeepSeek（经我们的 Supabase Edge Function 转发）：<b>翻译、单词讲解、每周点评、语法检查</b>。其中<b>语法检查会发送你输入的英文文本</b>；我们不随文本发送你的身份信息。</li>
+  <li>Supabase：账号认证与（开启同步后的）云端数据存储。</li>
 </ul>
 <p>我们仅发送完成功能所必需的内容，不发送可识别你身份的信息。</p>
 
 <h2>4. 数据存储与删除</h2>
-<p>本地数据保存在你的设备上。卸载本应用即可删除全部本地数据。我们的服务器不长期存储你的查询内容。</p>
+<p><b>本地数据</b>保存在你的设备上，卸载本应用即可删除全部本地数据。</p>
+<p><b>发送给第三方 AI / OCR / 词典服务的文本与图片</b>仅用于当次生成结果，我们的服务器不长期存储这些内容。</p>
+<p><b>云端同步数据</b>（仅在你登录并开启同步时存在）会持续保存，直到你删除账号。你可以在「我 → 账号 → 删除账号」发起删除请求，我们会删除你的账号及其关联的云端数据；你也可以随时关闭同步或退出登录，此后不再上传新数据。</p>
 
 <h2>5. 儿童隐私</h2>
 <p>本应用不面向 13 岁以下儿童定向收集信息。</p>
@@ -52,6 +58,6 @@
 <p>如有任何隐私相关问题，请联系：<a href="mailto:support@douhouse.com">support@douhouse.com</a></p>
 
 <hr>
-<p class="muted">English summary: PHONO stores your lookups, wordbook and settings locally on your device only (no account, no server-side personal data). Words/text you look up and images you choose for OCR are sent to third-party dictionary, OCR and translation services solely to provide the feature. Camera/photo access is used only for text recognition. Uninstalling the app removes all local data. Contact: support@douhouse.com</p>
+<p class="muted">English summary: PHONO stores your lookups, wordbook, sentences and settings <b>locally on your device by default</b>. An account is <b>optional</b> — all core features work without one; signing up (email address only) is used solely for cross-device sync. If you sign in and enable sync, your wordbook, sentences and study records are uploaded to our Supabase database and associated with your account. Words/text you look up, text you submit for grammar check or AI explanation, and images you choose for OCR are sent to third-party dictionary, OCR and AI services solely to provide the feature. Camera/photo access is used only for text recognition. Uninstalling the app removes all local data; you can request account and cloud-data deletion in-app. Contact: support@douhouse.com</p>
 </body>
 </html>
